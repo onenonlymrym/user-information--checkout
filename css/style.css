@@ -118,10 +118,9 @@ h6 {
     padding: 1rem 1.6rem;
     border-radius: 40px;
     background-color: var(--bg-color);
+    border: 1px solid var(--bg-color);
 
 }
-
-
 
 .info__user input:focus {
     outline: 0;
@@ -223,6 +222,7 @@ h6 {
     border-radius: 12px;
     padding: 1.5rem;
     overflow: hidden;
+    border: 1px solid var(--bg-color);
 }
 
 .info__address textarea:focus {
@@ -271,60 +271,48 @@ h6 {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     padding: 0.8rem 1.6rem;
+
 }
+
 
 
 .shipping__options {
     display: grid;
     grid-template-columns: 1fr;
-    padding-top: 2.5rem;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding-top: 3rem;
+
 }
 
 @media screen and (min-width:768px) {
     .shipping__options {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
 .shipping__option {
+     background-color: var(--bg-color);
+    border-radius: 40px;
+    padding: 1rem 1.5rem;
+}
+
+
+.shipping__option .shipping__label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    background-color: var(--bg-color);
-    border-radius: 40px;
-    padding: 1rem 1.5rem;
-
+   padding-right: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
 }
 
-.shipping__option .select-control input[type="radio"] {
+.shipping__option input[type="radio"] {
     display: none;
 }
 
-.shipping__option .select-control label {
-    position: relative;
-    padding-right: 2.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-
-.shipping__option .shipping__price {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.shipping__option .shipping__price span {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: rgba(96, 96, 96, 1);
-}
-
-.shipping__option .select-control label::before {
+.shipping__option .shipping__label::before{
     content: " ";
     position: absolute;
     width: 15px;
@@ -337,12 +325,25 @@ h6 {
     background-color: rgba(124, 127, 132, 0);
     border: 2px solid var(--primary-border-color);
     box-shadow: 0 0 0 2px var(--primary-color);
-    
 }
 
-.shipping__option .select-control input[type="radio"]:checked + label::before {
+.shipping__option input[type="radio"]:checked + label::before {
     background-color: var(--primary-color);
+    
+} 
+
+.shipping__price .price {
+    font-size: 1.4rem;
+    font-weight: 600;
+
 }
+
+.shipping__price .currency {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(96, 96, 96, 1);
+}
+
 
 /* DASHBOARD */
 
@@ -398,6 +399,7 @@ h6 {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+
 }
 
 .item__details .item__header h6 {
@@ -417,6 +419,7 @@ h6 {
 .item__options .item__price {
     font-size: 1.8rem;
     font-weight: 600;
+
 }
 
 .item__options .item__price span {
@@ -520,6 +523,7 @@ h6 {
 
 .dashboard__securepay .description {
     font-size: 1.5rem;
+
 
 }
 
