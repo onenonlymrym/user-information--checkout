@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="info">
+            <div class="info-delivery">
+                <div class="info__header">
+                    <h5>اطلاعات کابری</h5>
+                    <span>شما</span>
+                </div>
+                <div class="info__user">
+                    <h6>اطلاعات تحویل گیرنده</h6>
+                    <form>
+                        <div class="form-control">
+                            <label for="user-name">نام و نام خانودگی</label>
+                            <input type="text" id="user-name" placeholder="مثال : مریم خطیر">
+                        </div>
+                        <div class="form-control">
+                            <label for="phone-number">شماره تماس گیرنده</label>
+                            <input type="text" id="phone-number" placeholder="مثال : 09300000000 " minlength="11"
+                                maxlength="13" pattern="[0-9]" inputmode="numeric">
+                        </div>
+                    </form>
+                </div>
+                <div class="info__address">
+                    <div class="address__header">
+                        <h6>آدرس تحویل</h6>
+                        <span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 10H10M10 10H15M10 10V15M10 10V5" stroke="currentcolor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            انتخاب آدرس
+                        </span>
+                    </div>
+                    <form>
+                        <div class="form-control">
+                            <label for="user-province">استان</label>
+                            <select name="" id="user-province">
+                                <option value="">انتخاب کنید</option>
+                                <option value="0">خوزستان</option>
+                                <option value="0">کردستان</option>
+                                <option value="0">تهران</option>
+                                <option value="0">فارس</option>
+                                <option value="0">لرستان</option>
+                                <option value="0">اصفهان</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="phone-city">شهر</label>
+                            <select name="" id="user-city">
+                                <option value="">انتخاب کنید</option>
+                                <option value="0">خوزستان</option>
+                                <option value="0">کردستان</option>
+                                <option value="0">تهران</option>
+                                <option value="0">فارس</option>
+                                <option value="0">لرستان</option>
+                                <option value="0">اصفهان</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label for="user-plaque">پلاک</label>
+                            <input type="text" id="user-plaque" placeholder=" مثال :۱۰">
+                        </div>
+                        <div class="form-control">
+                            <label for="user-pcode">کدپستی</label>
+                            <input type="text" id="user-pcose" placeholder=" مثال : ۳۲۱۲۵۶۳۷۴۹۰">
+                        </div>
+                        <div class="form-control textarea">
+                            <label for="user-address">نشانی پستی</label>
+                            <textarea name="" id="useraddress"
+                                placeholder=" مثال : تهران، خیابان ولیعصر، منطقه ۱۲، بلوار کاوه، کوچه ابوذر، پلاک ۱۵"></textarea>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="info__shipping">
+                    <div class="shipping__header">
+                        <div class="title">
+                            <span>انتخاب</span>
+                            <h5>نحوه ارسال</h5>
+                        </div>
+                        <div class="badge">٣ محصول در سبد خرید</div>
+                    </div>
+                    <div class="shipping__options">
+                        <div class="shipping__option">
+                            <div class="select-control">
+                                <input type="radio" id="option-1" name="shipping-company">
+                                <label for="option-1">تیپاکس با بیمه (١ تا ٣ روز کاری)</label>
+                            </div>
+                            <div class="shipping__price">
+                                ۴۵,۰۰۰
+                                <span>تومان</span>
+                            </div>
+                        </div>
+                        <div class="shipping__option">
+                            <div class="select-control">
+                                <input type="radio" id="option-2" name="shipping-company">
+                                <label for="option-2">پست پیشتاز (٢ تا ۵ روز کاری)</label>
+                            </div>
+                            <div class="shipping__price">
+                                ۸۰,۰۰۰
+                                <span>تومان</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard">
+                <div class="info__header">
+                    <h5>اطلاعات</h5>
+                    <span>خرید</span>
+                </div>
+                <ul class="dashboard__items">
+                    <li class="dashboard__item">
+                        <div class="item__image"><img src="assets/images/perfume-1.svg" alt="perfume"></div>
+                        <div class="item__details">
+                            <div class="item__header">
+                                <h6>Hugo Just Different</h6>
+                                <span>۱۰۰ میل</span>
+                            </div>
+                            <div class="item__name">هوگو بوس جاست دیفرنت</div>
+                            <div class="item__options">
+                                <div class="item__price">۱,۵۵۰,۰۰۰ <span>تومان</span> </div>
+                                <span class="icon icon--primary">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="icon icon--secondary">١</span>
+                                <span class="icon icon--primary"><svg width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.99885 1.25C8.62322 1.25 7.38852 2.15103 6.99072 3.47704L6.97349 3.53449C5.65513 3.68154 4.34486 3.925 3.05331 4.26488L1.92313 4.5623C1.58931 4.65014 1.38992 4.99197 1.47776 5.32578C1.56561 5.65959 1.90743 5.85899 2.24124 5.77114L3.37142 5.47373C7.71575 4.33048 12.2819 4.33048 16.6263 5.47373L17.7565 5.77114C18.0903 5.85899 18.4321 5.65959 18.5199 5.32578C18.6078 4.99197 18.4084 4.65014 18.0746 4.5623L16.9444 4.26488C15.6528 3.925 14.3426 3.68154 13.0242 3.53449L13.007 3.47704C12.6092 2.15103 11.3745 1.25 9.99885 1.25ZM11.6228 3.41465C11.2878 2.85903 10.673 2.5 9.99885 2.5C9.32466 2.5 8.70993 2.85903 8.37486 3.41465C9.45655 3.35017 10.5411 3.35017 11.6228 3.41465Z"
+                                            fill="#CC312D" />
+                                        <path
+                                            d="M3.25447 6.21335C3.59697 6.17043 3.90941 6.41328 3.95233 6.75578L5.06689 15.65C5.18444 16.588 5.98196 17.2918 6.92734 17.2918H13.0704C14.0157 17.2918 14.8133 16.588 14.9308 15.65L16.0454 6.75578C16.0883 6.41328 16.4007 6.17043 16.7432 6.21335C17.0857 6.25627 17.3286 6.56871 17.2857 6.91121L16.1711 15.8054C15.9752 17.3688 14.646 18.5418 13.0704 18.5418H6.92734C5.3517 18.5418 4.02251 17.3688 3.82659 15.8054L2.71203 6.91121C2.66912 6.56871 2.91197 6.25627 3.25447 6.21335Z"
+                                            fill="#CC312D" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dashboard__item">
+                        <div class="item__image"><img src="assets/images/perfume-2.svg" alt="perfume"></div>
+                        <div class="item__details">
+                            <div class="item__header">
+                                <h6>Hugo Just Different</h6>
+                                <span>۱۰۰ میل</span>
+                            </div>
+                            <div class="item__name">هوگو بوس جاست دیفرنت</div>
+                            <div class="item__options">
+                                <div class="item__price">۱,۵۵۰,۰۰۰ <span>تومان</span> </div>
+                                <span class="icon icon--primary">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="icon icon--secondary">١</span>
+                                <span class="icon icon--primary"><svg width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.99885 1.25C8.62322 1.25 7.38852 2.15103 6.99072 3.47704L6.97349 3.53449C5.65513 3.68154 4.34486 3.925 3.05331 4.26488L1.92313 4.5623C1.58931 4.65014 1.38992 4.99197 1.47776 5.32578C1.56561 5.65959 1.90743 5.85899 2.24124 5.77114L3.37142 5.47373C7.71575 4.33048 12.2819 4.33048 16.6263 5.47373L17.7565 5.77114C18.0903 5.85899 18.4321 5.65959 18.5199 5.32578C18.6078 4.99197 18.4084 4.65014 18.0746 4.5623L16.9444 4.26488C15.6528 3.925 14.3426 3.68154 13.0242 3.53449L13.007 3.47704C12.6092 2.15103 11.3745 1.25 9.99885 1.25ZM11.6228 3.41465C11.2878 2.85903 10.673 2.5 9.99885 2.5C9.32466 2.5 8.70993 2.85903 8.37486 3.41465C9.45655 3.35017 10.5411 3.35017 11.6228 3.41465Z"
+                                            fill="#CC312D" />
+                                        <path
+                                            d="M3.25447 6.21335C3.59697 6.17043 3.90941 6.41328 3.95233 6.75578L5.06689 15.65C5.18444 16.588 5.98196 17.2918 6.92734 17.2918H13.0704C14.0157 17.2918 14.8133 16.588 14.9308 15.65L16.0454 6.75578C16.0883 6.41328 16.4007 6.17043 16.7432 6.21335C17.0857 6.25627 17.3286 6.56871 17.2857 6.91121L16.1711 15.8054C15.9752 17.3688 14.646 18.5418 13.0704 18.5418H6.92734C5.3517 18.5418 4.02251 17.3688 3.82659 15.8054L2.71203 6.91121C2.66912 6.56871 2.91197 6.25627 3.25447 6.21335Z"
+                                            fill="#CC312D" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="dashboard__item">
+                        <div class="item__image"><img src="assets/images/perfume-3.svg" alt="perfume"></div>
+                        <div class="item__details">
+                            <div class="item__header">
+                                <h6>Hugo Just Different</h6>
+                                <span>۱۰۰ میل</span>
+                            </div>
+                            <div class="item__name">هوگو بوس جاست دیفرنت</div>
+                            <div class="item__options">
+                                <div class="item__price">۱,۵۵۰,۰۰۰ <span>تومان</span> </div>
+                                <span class="icon icon--primary">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2"
+                                            stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </span>
+                                <span class="icon icon--secondary">١</span>
+                                <span class="icon icon--primary"><svg width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.99885 1.25C8.62322 1.25 7.38852 2.15103 6.99072 3.47704L6.97349 3.53449C5.65513 3.68154 4.34486 3.925 3.05331 4.26488L1.92313 4.5623C1.58931 4.65014 1.38992 4.99197 1.47776 5.32578C1.56561 5.65959 1.90743 5.85899 2.24124 5.77114L3.37142 5.47373C7.71575 4.33048 12.2819 4.33048 16.6263 5.47373L17.7565 5.77114C18.0903 5.85899 18.4321 5.65959 18.5199 5.32578C18.6078 4.99197 18.4084 4.65014 18.0746 4.5623L16.9444 4.26488C15.6528 3.925 14.3426 3.68154 13.0242 3.53449L13.007 3.47704C12.6092 2.15103 11.3745 1.25 9.99885 1.25ZM11.6228 3.41465C11.2878 2.85903 10.673 2.5 9.99885 2.5C9.32466 2.5 8.70993 2.85903 8.37486 3.41465C9.45655 3.35017 10.5411 3.35017 11.6228 3.41465Z"
+                                            fill="#CC312D" />
+                                        <path
+                                            d="M3.25447 6.21335C3.59697 6.17043 3.90941 6.41328 3.95233 6.75578L5.06689 15.65C5.18444 16.588 5.98196 17.2918 6.92734 17.2918H13.0704C14.0157 17.2918 14.8133 16.588 14.9308 15.65L16.0454 6.75578C16.0883 6.41328 16.4007 6.17043 16.7432 6.21335C17.0857 6.25627 17.3286 6.56871 17.2857 6.91121L16.1711 15.8054C15.9752 17.3688 14.646 18.5418 13.0704 18.5418H6.92734C5.3517 18.5418 4.02251 17.3688 3.82659 15.8054L2.71203 6.91121C2.66912 6.56871 2.91197 6.25627 3.25447 6.21335Z"
+                                            fill="#CC312D" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="dashboard__pay">
+                    <div class="total">
+                        <span class="title"> خرید شما:</span>
+                        <span class="price">۱,۴۵۰,۰۰۰ تومان</span>
+                    </div>
+                    <div class="delivery-pay">
+                        <span class="title">هزینه ارسال:</span>
+                        <span class="price">۰ تومان</span>
+                    </div>
+                    <div class="final-pay">
+                        <span class="title">مبلغ قابل پرداخت:</span>
+                        <span class="price">۸,۴۵۰,۰۰۰ <span>تومان</span></span>
+                    </div>
+                </div>
+                <div class="dashboard__securepay">
+                    <div><img src="assets/images/payment.svg" alt="zibal"></div>
+                    <div class="description">پرداخت امن با کارت‌های عضو شتاب از طریق <span>درگاه زیبال</span></div>
+                </div>
+                <div><button class="btn btn--primary">پرداخت و خرید محصول</button></div>
+            </div>
+
+        </div>
+        <div class="btn-options">
+            <div><button class="btn btn--secondary">مرحله قبل</button></div>
+            <div><button class="btn btn--primary">پرداخت و خرید محصول</button></div>
+        </div>
+    </section>
+
+</body>
+
+</html>
