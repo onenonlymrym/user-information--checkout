@@ -309,7 +309,9 @@ h6 {
     padding-right: 2.5rem;
     font-size: 1.2rem;
     font-weight: 500;
+    cursor: pointer;
 }
+
 
 .shipping__option .shipping__price {
     font-size: 1.4rem;
@@ -333,7 +335,13 @@ h6 {
     transform: translateY(-50%);
     display: inline-block;
     background-color: rgba(124, 127, 132, 0);
-    border: 1px solid rgba(124, 127, 132, 0.5);
+    border: 2px solid var(--primary-border-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+    
+}
+
+.shipping__option .select-control input[type="radio"]:checked + label::before {
+    background-color: var(--primary-color);
 }
 
 /* DASHBOARD */
@@ -546,7 +554,7 @@ h6 {
 
 .btn-options {
     display: none;
-    
+
 }
 
 @media screen and (max-width:1023px) {
