@@ -1,3 +1,4 @@
+/* RESET */
 *,
 *::before,
 *::after {
@@ -8,6 +9,8 @@
     text-decoration: none;
 }
 
+
+/*  */
 :root {
     --primary-color: rgba(204, 49, 45, 1);
     --secondary-color: rgba(229, 48, 63, 0.1);
@@ -114,11 +117,10 @@ h6 {
 
 .info__user input {
     outline: 0;
-    border: 1px solid var(--bg-color);
     padding: 1rem 1.6rem;
     border-radius: 40px;
     background-color: var(--bg-color);
-    border: 1px solid var(--bg-color);
+    border: 1px solid transparent;
 
 }
 
@@ -182,7 +184,7 @@ h6 {
 
 .info__address input {
     outline: 0;
-    border: 1px solid var(--bg-color);
+    border: 1px solid transparent;
     padding: 1rem 1.6rem;
     border-radius: 40px;
     background-color: var(--bg-color);
@@ -202,17 +204,124 @@ h6 {
     display: block;
 }
 
-.info__address .form-control select {
+
+
+/* SELECT */
+
+/* .info__address .form-control select {
     outline: 0;
-    border: 1px solid var(--bg-color);
+    border: 1px solid transparent;
     padding: 1rem 1.6rem;
     border-radius: 40px;
     background-color: var(--bg-color);
+    
 }
 
 .info__address .form-control select:focus {
     border: 1px solid var(--primary-color);
 }
+
+.info__address .form-control select::picker-icon{
+    padding-left: 2.5rem;
+    transform: rotate(18deg);
+}
+
+.info__address .form-control option{
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}  */
+
+.info__address .form-control select {
+  appearance: none;
+  @supports (appearance: base-select) {
+    &,
+    &::picker(select) {
+      appearance: base-select;
+    }
+  }
+}
+
+.info__address .form-control select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: var(--bg-color)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23FFF' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A")
+    right 10px center / 20px no-repeat;
+  @supports (appearance: base-select) {
+    padding-inline: 1rem;
+    background-image: none;
+    &::picker-icon {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='26, 24, 20, 1' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23FFF' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+      transition: rotate 0.5s ease-out;
+    }
+    &:open{
+        border: 1px solid var(--primary-color);
+    }
+    &:open::picker-icon {
+      rotate: 180deg;
+    }
+    &::picker(select) {
+      padding: 0;
+      margin-top: 0.5rem;
+      border: 1px solid var(--primary-color);
+      background: var(--bg-color);
+      border-radius: 30px;
+      font-weight: 400;
+      opacity: 0;
+      height: 0;
+      overflow: clip;
+      transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
+        display 0.5s;
+      transition-behavior: allow-discrete;
+    }
+    &:open::picker(select) {
+      opacity: 1;
+      height: calc-size(auto, size);
+      overflow: auto;
+      @starting-style {
+        opacity: 0;
+        height: 0;
+      }
+    }
+    option {
+      padding: 1rem;
+      border-top: 1px solid var(--secondary-color);
+      cursor: pointer;
+      transition-property: color, background;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+      &:where(:hover, :focus, :active) {
+        color: var(--primary-color);
+      }
+      &:checked {
+        background: var(--secondary-color);
+        color: var(--primary-color);
+      }
+      &::checkmark {
+        display: none;
+      }
+      &:first-child {
+        border: 0;
+      }
+    }
+  }
+}
+
+.info__address .form-control select:focus-visible, select:focus{
+    border: 1px solid var(--primary-color);
+}
+
+/* SELECT */
 
 
 .info__address textarea {
@@ -222,7 +331,7 @@ h6 {
     border-radius: 12px;
     padding: 1.5rem;
     overflow: hidden;
-    border: 1px solid var(--bg-color);
+    border: 1px solid transparent;
 }
 
 .info__address textarea:focus {
@@ -291,9 +400,14 @@ h6 {
 }
 
 .shipping__option {
-     background-color: var(--bg-color);
+    background-color: var(--bg-color);
     border-radius: 40px;
     padding: 1rem 1.5rem;
+    border: 1px solid transparent;
+}
+
+.shipping__option:hover {
+    border: 1px solid var(--primary-color);
 }
 
 
@@ -301,7 +415,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   padding-right: 2.5rem;
+    padding-right: 2.5rem;
     font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
@@ -312,7 +426,7 @@ h6 {
     display: none;
 }
 
-.shipping__option .shipping__label::before{
+.shipping__option .shipping__label::before {
     content: " ";
     position: absolute;
     width: 15px;
@@ -327,10 +441,10 @@ h6 {
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 
-.shipping__option input[type="radio"]:checked + label::before {
+.shipping__option input[type="radio"]:checked+label::before {
     background-color: var(--primary-color);
-    
-} 
+
+}
 
 .shipping__price .price {
     font-size: 1.4rem;
